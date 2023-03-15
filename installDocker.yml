@@ -2,7 +2,7 @@
 - hosts: docker
   become: true
   tasks:
-    - name: Install required Dependencies
+    - name: Install Dependencies
       apt:
         name: "{{item}}"
         state: present
@@ -39,5 +39,4 @@
         name: docker
         state: started
         enabled: yes
-
-		
+        
